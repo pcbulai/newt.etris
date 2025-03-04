@@ -64,6 +64,7 @@ body {
   justify-content: center;
   color: white;
   font-size: 24px;
+  z-index: 20;
 }
 
 .game-over h2 {

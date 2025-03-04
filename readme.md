@@ -271,29 +271,28 @@ Event handling is crucial for user interaction in the game. The game supports bo
 Keyboard events are handled to move and rotate the tetrominoes, as well as to pause the game.
 
 ```typescript
-import { Store } from "../models/index";
-
-export function bindKeyboardControls(store: Store) {
+export function bindKeyboardEvents(store: IStore) {
   document.addEventListener("keydown", (keyboardEvent: KeyboardEvent) => {
     switch (keyboardEvent.key) {
-      case "ArrowDown":
-        store.dispatch({ type: "MOVE_DOWN" });
+      case "s":
+        store.dispatch({ type: ActionsEnum.MOVE_DOWN });
+        break;
+      case "d":
+        store.dispatch({ type: ActionsEnum.MOVE_RIGHT });
+        break;
+      case "a":
+        store.dispatch({ type: ActionsEnum.MOVE_LEFT });
         break;
       case "ArrowRight":
-        store.dispatch({ type: "MOVE_RIGHT" });
+        store.dispatch({ type: ActionsEnum.ROTATE_RIGHT });
         break;
       case "ArrowLeft":
-        store.dispatch({ type: "MOVE_LEFT" });
-        break;
-      case "ArrowUp":
-        store.dispatch({ type: "ROTATE_RIGHT" });
-        break;
-      case " ":
-        store.dispatch({ type: "PLAY_PAUSE" });
+        store.dispatch({ type: ActionsEnum.ROTATE_LEFT });
         break;
     }
   });
 }
+
 ```
 
 ### Touch Events
@@ -340,8 +339,8 @@ export function bindTouchControls(store: Store) {
 To install the game, clone the repository and install the dependencies using npm:
 
 ```bash
-git clone https://github.com/yourusername/tetris-game.git
-cd tetris-game
+git clone git@github.com:pcbulai/newt.etris.git
+cd newt.etris
 npm install
 ```
 
@@ -350,7 +349,7 @@ npm install
 To start the game, run the following command:
 
 ```bash
-npm start
+npx start
 ```
 
 Open your browser and navigate to `http://localhost:3000` to play the game.
