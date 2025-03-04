@@ -8,6 +8,7 @@ This is a Tetris game implemented in TypeScript. The game is designed to be resp
 - [Store Pattern](#store-pattern)
 - [Game Loop](#game-loop)
 - [Tetris Algorithm](#tetris-algorithm)
+- [Event Handling](#event-handling)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
@@ -258,6 +259,79 @@ export function clearFullRows(state: IState): IState {
     score,
     matrix: updatedMatrix.reverse(),
   };
+}
+```
+
+## Event Handling
+
+Event handling is crucial for user interaction in the game. The game supports both keyboard and touch events to control the tetrominoes.
+
+### Keyboard Events
+
+Keyboard events are handled to move and rotate the tetrominoes, as well as to pause the game.
+
+```typescript
+import { Store } from "../models/index";
+
+export function bindKeyboardControls(store: Store) {
+  document.addEventListener("keydown", (keyboardEvent: KeyboardEvent) => {
+    switch (keyboardEvent.key) {
+      case "ArrowDown":
+        store.dispatch({ type: "MOVE_DOWN" });
+        break;
+      case "ArrowRight":
+        store.dispatch({ type: "MOVE_RIGHT" });
+        break;
+      case "ArrowLeft":
+        store.dispatch({ type: "MOVE_LEFT" });
+        break;
+      case "ArrowUp":
+        store.dispatch({ type: "ROTATE_RIGHT" });
+        break;
+      case " ":
+        store.dispatch({ type: "PLAY_PAUSE" });
+        break;
+    }
+  });
+}
+```
+
+### Touch Events
+
+Touch events are handled to provide a similar experience on mobile devices. Swiping gestures are mapped to the corresponding actions.
+
+```typescript
+import { Store } from "../models/index";
+
+export function bindTouchControls(store: Store) {
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  const handleGesture = () => {
+    const deltaX = touchEndX - touchStartX;
+    const deltaY = touchEndY - touchStartY;
+
+    if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      store.dispatch({ type: deltaX > 0 ? "MOVE_RIGHT" : "MOVE_LEFT" });
+    } else if (deltaY > 0) {
+      store.dispatch({ type: "MOVE_DOWN" });
+    } else {
+      store.dispatch({ type: "ROTATE_RIGHT" });
+    }
+  };
+
+  document.addEventListener("touchstart", (event: TouchEvent) => {
+    touchStartX = event.changedTouches[0].screenX;
+    touchStartY = event.changedTouches[0].screenY;
+  });
+
+  document.addEventListener("touchend", (event: TouchEvent) => {
+    touchEndX = event.changedTouches[0].screenX;
+    touchEndY = event.changedTouches[0].screenY;
+    handleGesture();
+  });
 }
 ```
 
