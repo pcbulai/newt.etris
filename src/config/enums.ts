@@ -1,0 +1,10 @@
+export enum ActionsEnum {
+  TICK,
+  MOVE_DOWN,
+  MOVE_RIGHT,
+  MOVE_LEFT,
+  ROTATE_RIGHT,
+  ROTATE_LEFT,
+  PLAY_PAUSE,
+  BOOSTER_ENGAGED,
+}

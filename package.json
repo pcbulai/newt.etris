@@ -1,0 +1,30 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "A simple Tetris game implemented in TypeScript.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "watch": "tsc -w"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/tetris.git"
+  },
+  "keywords": [
+    "tetris",
+    "game",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/tetris/issues"
+  },
+  "homepage": "https://github.com/yourusername/tetris#readme"
+}
