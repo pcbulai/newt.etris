@@ -30,7 +30,11 @@ export function clearFullRows(state) {
     const clearedMatrix = matrix.filter((row) => !row.every(Boolean)).reverse();
     const clearedRows = matrix.length - clearedMatrix.length;
     const score = state.score + clearedRows;
-    return Object.assign(Object.assign({}, state), { score, matrix: createMatrix(stageWidth, stageHeight)
+    const booster = Math.floor(score / 2) > Math.floor(state.score / 2)
+        ? state.booster + 1
+        : state.booster;
+    return Object.assign(Object.assign({}, state), { score,
+        booster, matrix: createMatrix(stageWidth, stageHeight)
             .map((row, y) => row.map((_cell, x) => { var _a, _b; return (_b = (_a = clearedMatrix[y]) === null || _a === void 0 ? void 0 : _a[x]) !== null && _b !== void 0 ? _b : null; }))
             .reverse() });
 }

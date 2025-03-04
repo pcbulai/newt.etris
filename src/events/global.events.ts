@@ -9,10 +9,10 @@ export function bindGlobalEvents(canvas: HTMLCanvasElement, store: IStore) {
   const rotateRight = document.querySelector(".rotate-right");
 
   canvas?.addEventListener("click", (event: MouseEvent) => {
-    event.preventDefault();
     const rect = canvas.getBoundingClientRect();
     const x = Math.floor((event.clientX - rect.left) / GRID_SIZE.unit);
     const y = Math.floor((event.clientY - rect.top) / GRID_SIZE.unit);
+    console.log(x, y);
 
     store.dispatch({
       type: ActionsEnum.BOOSTER_ENGAGED,
@@ -34,13 +34,11 @@ export function bindGlobalEvents(canvas: HTMLCanvasElement, store: IStore) {
     });
   });
 
-  rotateLeft?.addEventListener("click", (event: Event) => {
-    // event.preventDefault();
+  rotateLeft?.addEventListener("click", () => {
     store.dispatch({ type: ActionsEnum.ROTATE_LEFT });
   });
 
-  rotateRight?.addEventListener("click", (event: Event) => {
-    // event.preventDefault();
+  rotateRight?.addEventListener("click", () => {
     store.dispatch({ type: ActionsEnum.ROTATE_RIGHT });
   });
 }

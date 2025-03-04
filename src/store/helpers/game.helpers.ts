@@ -1,4 +1,4 @@
-import { COLORS, tetrominoes } from "../../config/index";
+import { BOOSTER_MULTIPLIER, COLORS, tetrominoes } from "../../config/index";
 import { IState, ITetromino } from "../../models/index";
 import {
   createMatrix,
@@ -56,10 +56,16 @@ export function clearFullRows(state: IState): IState {
   const clearedMatrix = matrix.filter((row) => !row.every(Boolean)).reverse();
   const clearedRows = matrix.length - clearedMatrix.length;
   const score = state.score + clearedRows;
+  const booster =
+    Math.floor(score / BOOSTER_MULTIPLIER) >
+    Math.floor(state.score / BOOSTER_MULTIPLIER)
+      ? ++state.booster
+      : state.booster;
 
   return {
     ...state,
     score,
+    booster,
     matrix: createMatrix(stageWidth, stageHeight)
       .map((row, y) => row.map((_cell, x) => clearedMatrix[y]?.[x] ?? null))
       .reverse(),

@@ -89,6 +89,7 @@ export function clearConnectedCells(
   y: number
 ): Matrix {
   const color = matrix[y]?.[x];
+  console.log(matrix, x, y, color);
 
   if (!color || !matrix) {
     return matrix;

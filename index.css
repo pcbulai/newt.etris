@@ -90,18 +90,10 @@ body {
   vertical-align: top;
 }
 
-.game-rotation {
+.rotate-left,
+.rotate-right {
   position: absolute;
-  width: 100%;
   bottom: 16px;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-.game-rotation .rotate-left,
-.game-rotation .rotate-right {
   padding: 8px 16px;
   background: #007bff;
   color: white;
@@ -111,13 +103,21 @@ body {
   font-size: 14px;
 }
 
-.game-rotation .rotate-left:hover,
-.game-rotation .rotate-right:hover {
+.rotate-left {
+  left: 16px;
+}
+
+.rotate-right {
+  right: 16px;
+}
+
+.rotate-left:hover,
+.rotate-right:hover {
   background: #0056b3;
 }
 
-.game-rotation .rotate-left:active,
-.game-rotation .rotate-right:active {
+.rotate-left:active,
+.rotate-right:active {
   background: #004085;
 }
 

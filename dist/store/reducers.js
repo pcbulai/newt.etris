@@ -7,7 +7,7 @@ export const initialState = {
     activeTetromino: null,
     matrix: [],
     score: 0,
-    booster: 0,
+    booster: 1,
     isGamePaused: false,
     isGameOver: false,
     clickCoords: null,

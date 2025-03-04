@@ -20,3 +20,4 @@ export const GRID_SIZE = {
 // Other constants
 export const TICK_RATE_BASE = 1.5;
 export const TICK_RATE_MULTIPLIER = 0.25;
+export const BOOSTER_MULTIPLIER = 10;
