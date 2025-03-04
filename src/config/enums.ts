@@ -8,3 +8,12 @@ export enum ActionsEnum {
   PLAY_PAUSE,
   BOOSTER_ENGAGED,
 }
+
+export enum KeyBindingsEnum {
+  MOVE_DOWN = "s",
+  MOVE_RIGHT = "d",
+  MOVE_LEFT = "a",
+  ROTATE_RIGHT = "ArrowRight",
+  ROTATE_LEFT = "ArrowLeft",
+  PLAY_PAUSE = " ",
+}

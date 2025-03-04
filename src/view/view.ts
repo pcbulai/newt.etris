@@ -37,6 +37,9 @@ export function viewInit({
   const gameBooster =
     document.querySelector<HTMLDivElement>(".game-booster span");
   const gameOver = document.querySelector<HTMLDivElement>(".game-over");
+  const rotateLeft = document.querySelector(".rotate-left");
+  const rotateRight = document.querySelector(".rotate-right");
+
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   store.subscribe((state) => {
@@ -59,6 +62,8 @@ export function viewInit({
   bindGlobalEvents(ctx.canvas, store);
   if (isMobile) {
     bindTouchEvents(store);
+    rotateLeft?.classList.remove("hidden");
+    rotateRight?.classList.remove("hidden");
   } else {
     bindKeyboardEvents(store);
   }

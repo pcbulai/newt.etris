@@ -6,6 +6,8 @@ export function bindTouchEvents(store: IStore) {
   let touchStartY = 0;
   let touchEndX = 0;
   let touchEndY = 0;
+  const rotateLeft = document.querySelector(".rotate-left");
+  const rotateRight = document.querySelector(".rotate-right");
 
   const handleSwipes = () => {
     const deltaX = touchEndX - touchStartX;
@@ -29,5 +31,13 @@ export function bindTouchEvents(store: IStore) {
     touchEndX = event.changedTouches[0].screenX;
     touchEndY = event.changedTouches[0].screenY;
     handleSwipes();
+  });
+
+  rotateLeft?.addEventListener("click", () => {
+    store.dispatch({ type: ActionsEnum.ROTATE_LEFT });
+  });
+
+  rotateRight?.addEventListener("click", () => {
+    store.dispatch({ type: ActionsEnum.ROTATE_RIGHT });
   });
 }

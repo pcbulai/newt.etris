@@ -5,8 +5,6 @@ import { initGame } from "../view/game";
 export function bindGlobalEvents(canvas: HTMLCanvasElement, store: IStore) {
   const pauseButton = document.querySelector(".game-pause");
   const restartButton = document.querySelector(".game-restart");
-  const rotateLeft = document.querySelector(".rotate-left");
-  const rotateRight = document.querySelector(".rotate-right");
 
   canvas?.addEventListener("click", (event: MouseEvent) => {
     const rect = canvas.getBoundingClientRect();
@@ -32,13 +30,5 @@ export function bindGlobalEvents(canvas: HTMLCanvasElement, store: IStore) {
       height: GRID_SIZE.height,
       resolution: GRID_SIZE.unit,
     });
-  });
-
-  rotateLeft?.addEventListener("click", () => {
-    store.dispatch({ type: ActionsEnum.ROTATE_LEFT });
-  });
-
-  rotateRight?.addEventListener("click", () => {
-    store.dispatch({ type: ActionsEnum.ROTATE_RIGHT });
   });
 }
