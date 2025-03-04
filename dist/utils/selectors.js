@@ -1,5 +1,5 @@
-import { TICK_RATE_BASE, TICK_RATE_MULTIPLIER } from "../config/index.js";
-import { shrinkWrapShape } from "./matrixOperations.js";
+import { TICK_RATE_BASE, TICK_RATE_MULTIPLIER } from "../config/index";
+import { shrinkWrapShape } from "./matrixOperations";
 export function hasCollision({ activeTetromino, matrix, stageWidth, stageHeight, }) {
     if (activeTetromino == null) {
         return false;

@@ -1,12 +1,12 @@
-import { ActionsEnum } from "../config/index.js";
-import { IAction, ICoordinates, IState, ITetromino } from "../models/index.js";
+import { ActionsEnum } from "../config/index";
+import { IAction, ICoordinates, IState, ITetromino } from "../models/index";
 import {
   clearConnectedCells,
   hasCollision,
   isTopOut,
   pipe,
   TetrominoPool,
-} from "../utils/index.js";
+} from "../utils/index";
 import {
   clearFullRows,
   endGame,
@@ -16,7 +16,7 @@ import {
   rotateLeft,
   rotateRight,
   spawn,
-} from "./helpers/index.js";
+} from "./helpers/index";
 
 export const initialState: IState = {
   stageWidth: 0,

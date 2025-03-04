@@ -1,3 +1,3 @@
-export * from "./canvas.js";
-export * from "./game.js";
-export * from "./view.js";
+export * from "./canvas";
+export * from "./game";
+export * from "./view";

@@ -1,4 +1,4 @@
-import { ActionsEnum } from "../config/index.js";
+import { ActionsEnum } from "../config/index";
 export function bindTouchEvents(store) {
     let touchStartX = 0;
     let touchStartY = 0;

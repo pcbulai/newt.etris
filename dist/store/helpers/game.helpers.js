@@ -1,5 +1,5 @@
-import { COLORS, tetrominoes } from "../../config/index.js";
-import { createMatrix, getMatrixBounds, getRandomTetromino, setTetrominoRotation, } from "../../utils/index.js";
+import { COLORS, tetrominoes } from "../../config/index";
+import { createMatrix, getMatrixBounds, getRandomTetromino, setTetrominoRotation, } from "../../utils/index";
 export function spawn(state, tilePool) {
     const { activeTetromino: prevActiveTetromino, matrix, stageWidth, stageHeight, } = state;
     const tetromino = getRandomTetromino(tetrominoes);

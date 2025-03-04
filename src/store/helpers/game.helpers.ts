@@ -1,12 +1,12 @@
-import { COLORS, tetrominoes } from "../../config/index.js";
-import { IState, ITetromino } from "../../models/index.js";
+import { COLORS, tetrominoes } from "../../config/index";
+import { IState, ITetromino } from "../../models/index";
 import {
   createMatrix,
   getMatrixBounds,
   getRandomTetromino,
   setTetrominoRotation,
   TetrominoPool,
-} from "../../utils/index.js";
+} from "../../utils/index";
 
 export function spawn(
   state: IState,

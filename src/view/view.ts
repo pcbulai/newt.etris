@@ -2,9 +2,9 @@ import {
   bindGlobalEvents,
   bindKeyboardEvents,
   bindTouchEvents,
-} from "../events/index.js";
-import { IStore } from "../models/index.js";
-import { canvasInit } from "./canvas.js";
+} from "../events/index";
+import { IStore } from "../models/index";
+import { canvasInit } from "./canvas";
 
 export function viewInit({
   bufferWidth,

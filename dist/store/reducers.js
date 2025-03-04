@@ -1,6 +1,6 @@
-import { ActionsEnum } from "../config/index.js";
-import { clearConnectedCells, hasCollision, isTopOut, pipe, } from "../utils/index.js";
-import { clearFullRows, endGame, moveDown, moveLeft, moveRight, rotateLeft, rotateRight, spawn, } from "./helpers/index.js";
+import { ActionsEnum } from "../config/index";
+import { clearConnectedCells, hasCollision, isTopOut, pipe, } from "../utils/index";
+import { clearFullRows, endGame, moveDown, moveLeft, moveRight, rotateLeft, rotateRight, spawn, } from "./helpers/index";
 export const initialState = {
     stageWidth: 0,
     stageHeight: 0,

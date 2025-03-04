@@ -1,4 +1,4 @@
-import { COLORS } from "../config/index.js";
+import { COLORS } from "../config/index";
 export function canvasInit({ ctx, bufferWidth, bufferHeight, unit, }) {
     const canvasCell = (x, y, fill) => {
         const left = x * unit;

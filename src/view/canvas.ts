@@ -1,5 +1,5 @@
-import { COLORS } from "../config/index.js";
-import { canvasCell, IState } from "../models/index.js";
+import { COLORS } from "../config/index";
+import { canvasCell, IState } from "../models/index";
 
 export function canvasInit({
   ctx,

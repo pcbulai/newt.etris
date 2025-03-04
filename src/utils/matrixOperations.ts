@@ -1,5 +1,5 @@
-import { ITetromino, Matrix } from "../models/index.js";
-import { cryptoRandomInt } from "./rng.js";
+import { ITetromino, Matrix } from "../models/index";
+import { cryptoRandomInt } from "./rng";
 
 export function createMatrix(width: number, height: number): Matrix {
   return new Array(height).fill(null).map(() => {

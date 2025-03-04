@@ -1,5 +1,5 @@
-import { ActionsEnum } from "../config/index.js";
-import { IStore } from "../models/index.js";
+import { ActionsEnum } from "../config/index";
+import { IStore } from "../models/index";
 
 export function bindKeyboardEvents(store: IStore) {
   document.addEventListener("keydown", (keyboardEvent: KeyboardEvent) => {

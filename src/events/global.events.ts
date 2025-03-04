@@ -1,6 +1,6 @@
-import { ActionsEnum, GRID_SIZE } from "../config/index.js";
-import { IStore } from "../models/index.js";
-import { initGame } from "../view/game.js";
+import { ActionsEnum, GRID_SIZE } from "../config/index";
+import { IStore } from "../models/index";
+import { initGame } from "../view/game";
 
 export function bindGlobalEvents(canvas: HTMLCanvasElement, store: IStore) {
   const pauseButton = document.querySelector(".game-pause");

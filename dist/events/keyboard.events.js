@@ -1,4 +1,4 @@
-import { ActionsEnum } from "../config/index.js";
+import { ActionsEnum } from "../config/index";
 export function bindKeyboardEvents(store) {
     document.addEventListener("keydown", (keyboardEvent) => {
         switch (keyboardEvent.key) {

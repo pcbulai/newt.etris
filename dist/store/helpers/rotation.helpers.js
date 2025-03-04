@@ -1,4 +1,4 @@
-import { rotateTetrominoLeft, rotateTetrominoRight, } from "../../utils/index.js";
+import { rotateTetrominoLeft, rotateTetrominoRight } from "../../utils/index";
 export function rotateRight(state) {
     return state.activeTetromino == null
         ? state

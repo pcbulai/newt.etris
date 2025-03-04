@@ -1,5 +1,5 @@
-import { GRID_SIZE } from "./config/index.js";
-import { initGame } from "./view/index.js";
+import { GRID_SIZE } from "./config/index";
+import { initGame } from "./view/index";
 
 initGame({
   width: GRID_SIZE.width,

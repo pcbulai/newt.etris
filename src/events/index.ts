@@ -1,3 +1,3 @@
-export * from "./global.events.js";
-export * from "./keyboard.events.js";
-export * from "./touch.events.js";
+export * from "./global.events";
+export * from "./keyboard.events";
+export * from "./touch.events";

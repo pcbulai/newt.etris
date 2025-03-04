@@ -1,6 +1,6 @@
-import { TICK_RATE_BASE, TICK_RATE_MULTIPLIER } from "../config/index.js";
-import { CollisionParams } from "../models/index.js";
-import { shrinkWrapShape } from "./matrixOperations.js";
+import { TICK_RATE_BASE, TICK_RATE_MULTIPLIER } from "../config/index";
+import { CollisionParams } from "../models/index";
+import { shrinkWrapShape } from "./matrixOperations";
 
 export function hasCollision({
   activeTetromino,

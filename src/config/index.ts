@@ -1,3 +1,3 @@
-export * from "./constants.js";
-export * from "./enums.js";
-export * from "./shapes.js";
+export * from "./constants";
+export * from "./enums";
+export * from "./shapes";

@@ -1,2 +1,2 @@
-export * from "./reducers.js";
-export * from "./store.js";
+export * from "./reducers";
+export * from "./store";

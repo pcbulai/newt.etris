@@ -7,10 +7,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { ActionsEnum } from "../config/index.js";
-import { Store } from "../store/index.js";
-import { nextFrame, tickRate } from "../utils/index.js";
-import { viewInit } from "./view.js";
+import { ActionsEnum } from "../config/index";
+import { Store } from "../store/index";
+import { nextFrame, tickRate } from "../utils/index";
+import { viewInit } from "./view";
 export function initGame({ width, height, resolution, }) {
     const stageWidth = Math.max(4, Math.ceil(width));
     const stageHeight = Math.max(4, Math.ceil(height));

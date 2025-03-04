@@ -4,9 +4,9 @@ import {
   IStore,
   ISubscriber,
   ITetromino,
-} from "../models/index.js";
-import { createMatrix, TetrominoPool } from "../utils/index.js";
-import { initialState, rootReducer } from "./reducers.js";
+} from "../models/index";
+import { createMatrix, TetrominoPool } from "../utils/index";
+import { initialState, rootReducer } from "./reducers";
 
 export class Store implements IStore {
   private state: IState;

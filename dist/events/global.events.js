@@ -1,5 +1,5 @@
-import { ActionsEnum, GRID_SIZE } from "../config/index.js";
-import { initGame } from "../view/game.js";
+import { ActionsEnum, GRID_SIZE } from "../config/index";
+import { initGame } from "../view/game";
 export function bindGlobalEvents(canvas, store) {
     const pauseButton = document.querySelector(".game-pause");
     const restartButton = document.querySelector(".game-restart");

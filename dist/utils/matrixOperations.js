@@ -1,4 +1,4 @@
-import { cryptoRandomInt } from "./rng.js";
+import { cryptoRandomInt } from "./rng";
 export function createMatrix(width, height) {
     return new Array(height).fill(null).map(() => {
         return new Array(width).fill(null);

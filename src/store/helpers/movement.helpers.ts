@@ -1,4 +1,4 @@
-import { IState } from "../../models/index.js";
+import { IState } from "../../models/index";
 
 export function moveDown(state: IState): IState {
   return state.activeTetromino == null

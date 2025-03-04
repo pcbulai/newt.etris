@@ -1,7 +1,7 @@
-import { ActionsEnum } from "../config/index.js";
-import { Store } from "../store/index.js";
-import { nextFrame, tickRate } from "../utils/index.js";
-import { viewInit } from "./view.js";
+import { ActionsEnum } from "../config/index";
+import { Store } from "../store/index";
+import { nextFrame, tickRate } from "../utils/index";
+import { viewInit } from "./view";
 
 export function initGame({
   width,

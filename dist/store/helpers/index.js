@@ -1,3 +1,3 @@
-export * from "./game.helpers.js";
-export * from "./movement.helpers.js";
-export * from "./rotation.helpers.js";
+export * from "./game.helpers";
+export * from "./movement.helpers";
+export * from "./rotation.helpers";

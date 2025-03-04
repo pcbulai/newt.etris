@@ -1,8 +1,5 @@
-import { IState } from "../../models/index.js";
-import {
-  rotateTetrominoLeft,
-  rotateTetrominoRight,
-} from "../../utils/index.js";
+import { IState } from "../../models/index";
+import { rotateTetrominoLeft, rotateTetrominoRight } from "../../utils/index";
 
 export function rotateRight(state: IState): IState {
   return state.activeTetromino == null

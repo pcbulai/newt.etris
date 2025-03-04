@@ -1,5 +1,5 @@
-import { bindGlobalEvents, bindKeyboardEvents, bindTouchEvents, } from "../events/index.js";
-import { canvasInit } from "./canvas.js";
+import { bindGlobalEvents, bindKeyboardEvents, bindTouchEvents, } from "../events/index";
+import { canvasInit } from "./canvas";
 export function viewInit({ bufferWidth, bufferHeight, unit, store, }) {
     const canvas = document.querySelector(".game canvas");
     if (!canvas) {

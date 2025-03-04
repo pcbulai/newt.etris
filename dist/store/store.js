@@ -1,5 +1,5 @@
-import { createMatrix, TetrominoPool } from "../utils/index.js";
-import { initialState, rootReducer } from "./reducers.js";
+import { createMatrix, TetrominoPool } from "../utils/index";
+import { initialState, rootReducer } from "./reducers";
 export class Store {
     constructor(stageWidth, stageHeight) {
         this.subscribers = new Set();
