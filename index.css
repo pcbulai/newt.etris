@@ -1,6 +1,11 @@
 body {
   background: rgb(230, 230, 225);
   margin: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
 }
 
 .game-ui {
