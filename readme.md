@@ -349,7 +349,7 @@ npm install
 To start the game, run the following command:
 
 ```bash
-npx start
+npx serve
 ```
 
 Open your browser and navigate to `http://localhost:3000` to play the game.
