@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "build": "tsc && webpack --config webpack.config.js",
-    "start": "node dist/index.js",
-    "watch": "tsc -w"
+    "start": "webpack serve --config webpack.config.js --open",
+    "watch": "webpack --watch --config webpack.config.js"
   },
   "devDependencies": {
     "ts-loader": "^9.5.2",
